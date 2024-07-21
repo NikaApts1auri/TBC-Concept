@@ -1,64 +1,68 @@
-
-
 @font-face {
     font-family: 'TBCX';
     src: url('path/to/TBCX.ttf') format('truetype');
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     justify-content: center;
     color: #555f62;
     max-width: 111rem;
     font-family: 'TBCX', sans-serif;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-header{
-    background-color: #fff;;
+
+header {
+    background-color: #fff;
     height: 8rem;
     display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0 1.5rem;
-justify-content: space-between;
-min-width: 35.5rem;
-border-bottom: 0.1rem solid rgb(222, 220, 220);
+    flex-direction: row;
+    align-items: center;
+    padding: 0 1.5rem;
+    justify-content: space-between;
+    min-width: 35.5rem;
+    border-bottom: 0.1rem solid rgb(222, 220, 220);
 }
-.tbcGrey{
-width: 3.6rem;
+
+.tbcGrey {
+    width: 3.6rem;
     height: 3.2rem;
     cursor: pointer;
 }
+
 .search {
     width: 2.5rem;
     height: 2.5rem;
-    fill:  currentColor;
+    fill: currentColor;
     transition: fill 0.3s;
     margin-top: 0.3rem;
     margin-right: 1.5rem;
     cursor: pointer;
+}
 
-  }
+.search:hover {
+    fill: #3295ce;
+}
 
-  .search:hover {
-    fill:  #3295ce;
-  }
-.arrow{
+.arrow {
     fill: #182cc0;
     width: 1.7rem;
     height: 1.6rem;
 }
-.arrow-order p{
-   color: currentColor;
+
+.arrow-order p {
+    color: currentColor;
 }
 
-.arrow-order{
+.arrow-order {
     display: flex;
     align-items: center;
     margin-right: 1rem;
@@ -69,47 +73,49 @@ width: 3.6rem;
 .arrow-order:hover .arrow {
     fill: #3295ce;
 }
+
 .arrow-order:hover .order {
     color: #3295ce;
 }
 
-.headerBtn{
+.headerBtn {
     width: 3.6rem;
     height: 3.2rem;
+}
 
+.arrow-order p {
+    font-weight: 500;
+    line-height: 1.4;
+    color: #182cc0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
-.arrow-order p{
-font-weight: 500;
-line-height: 1.4;
-color:#182cc0;
-text-transform: uppercase;
-font-size: 1.2rem; 
-}
-header div{
+
+header div {
     display: flex;
-
 }
-main{
+
+main {
     background-color: #f9fafa;
 }
 
-/* starting main's styles */
+/* Starting main's styles */
 
-.back{
+.back {
     height: 8rem;
     display: flex;
     align-items: center;
-padding: 0 1.5rem 1rem;
-
-    
+    padding: 0 1.5rem 1rem;
 }
-.back span{
-   color:  #141719;
+
+.back span {
+    color: #141719;
     font-weight: 500;
     line-height: 1.7;
     font-size: 1.2rem;
 }
-.banner{
+
+.banner {
     min-height: 36rem;
     position: relative;
     padding: 17.2rem 4rem 2rem;
@@ -118,89 +124,128 @@ padding: 0 1.5rem 1rem;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
-    /* align-items: flex-start; */
     flex-direction: column;
     justify-content: center;
 }
-.bannerInner{
+
+.bannerInner {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     gap: 2rem;
-    
 }
 
-.banner h2{
+.banner h2 {
     color: #fff;
     font-size: 1.6rem;
-
 }
-.banner p{
+
+.banner p {
     color: #fff;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7;
 }
-.banner button{
 
+.banner button {
     transition: background-color 0.5s ease;
     width: 100%;
-   height: 5rem;
-   border: none;
-   border-radius: 0.6rem;
-   background-color: #182cc0;
-   color: white;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   gap: 0.8rem;
+    height: 5rem;
+    border: none;
+    border-radius: 0.6rem;
+    background-color: #182cc0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
 }
-.banner button:hover{
+
+.banner button:hover {
     background-color: #3295ce;
-    transition: color 0.5;
+    transition: color 0.5s;
 }
-.message{
-  padding: 6rem 1.5rem 0;
+
+.message {
+    padding: 6rem 1.5rem 0;
 }
-.message p{
+
+.message p {
     font-size: 2.4rem;
     color: #141719;
-    font-size: 2.4rem;
     font-weight: 500;
     line-height: 1.5;
     font-family: 'TBCX', sans-serif;
-    
 }
-.choose{
 
-    margin-top: 4rem;
+.choose {
     display: flex;
     flex-direction: column;
     padding: 0 1.5rem;
 }
-/* .choose h2{
-    width: 140px;
-    height: 20px;
-} */
-.card{
-    margin-top: auto;
-    /* margin: 2rem; */
-    width: 28rem;
-    height: 23.2rem;
+
+.choose h2 {
+    margin-left: 1rem;
+    margin-top: 5rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #141719;
+}
+
+.cards-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    width: 100%; 
+    display: flex;
+    gap: 1rem;
+}
+
+
+.card {
+    flex: 0 0 280px; 
+    height: 232px; 
     cursor: pointer;
     border-radius: 0.8rem;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 2rem; /* Optional: Adjust padding as needed */
-    color: white; /* Example text color for visibility */
+    padding: 2rem; 
+    color: white; 
+    padding-top: 14rem;
+    /* gap: 2rem; */
+    align-items: flex-start;
+}
+
+.card:hover {
+    transform: scale(1.01); 
+}
+
+.card div {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card h3 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.card div a {
+    color: white;
+    font-size: 1.2rem;
 }
 .digital.card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background-image: url("./images/mfvvitla.0j5430128849_7213815365374065_9017687812435872577_n.png");
+    background-image: url("./images/digital.png");
+}
 
+.middle {
+    background-image: url("./images/download-8.png");
+}
+.premium{
+    background-image: url("./images/premium.png");
 }

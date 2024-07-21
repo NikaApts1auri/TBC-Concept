@@ -249,3 +249,97 @@ main {
 .premium{
     background-image: url("./images/premium.png");
 }
+
+/* ended choose collect section  */
+.number-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100vh; */
+ padding: 4rem;
+ gap: 2rem;
+}
+.item{
+ padding: 4rem 4.8rem;
+ height: 18rem;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ background-color: #fff;
+}
+.item p{
+    color: #141719;
+    font-size: 4.4rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+.item span{
+    color: #555f62;
+    background-color: white;
+    font-family: TBCX, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.7;
+    
+}
+/* ended number-data */
+.offers{
+    padding: 0 1.5rem;
+}
+.offers div{
+    display: flex;
+    justify-content: space-between;
+}
+.offers div h2{
+    color: #141719;
+    margin-top: 0;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.allOffer{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.allOffer svg {
+    fill: #182cc0;
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.allOffer span {
+    color: #182cc0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.offers-wrap{
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem;
+    width: 100%; 
+    display: flex;
+    gap: 1rem;
+ }
+ 
+ .item{
+    width: 100%;
+ }
+ .investment{
+    background-image: url("	https://static.tbcconcept.ge/desktop/media/krchkk0k.rjw1110x332_1%201%20(2).png");
+}
+.iveria{
+    background-image: url("./images/iveria.jpg");
+}
+.tegeta{
+    background-image: url("./images/download-10.png");
+}
+.tegetaBt{
+    background-image: url("./images/download-3.png");
+}
+.LeMeridian{
+    background-image: url("./images/download-4.png");
+}
+.Colosseum{
+    background-image: url("./images/download-6.png");
+}

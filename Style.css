@@ -21,6 +21,9 @@ html {
 }
 
 header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
     background-color: #fff;
     height: 8rem;
     display: flex;
@@ -200,8 +203,8 @@ main {
     width: 100%; 
     display: flex;
     gap: 1rem;
+    scroll-snap-type: x mandatory;
 }
-
 
 .card {
     flex: 0 0 280px; 
@@ -214,8 +217,8 @@ main {
     padding: 2rem; 
     color: white; 
     padding-top: 14rem;
-    /* gap: 2rem; */
     align-items: flex-start;
+    scroll-snap-align: start;
 }
 
 .card:hover {
@@ -239,6 +242,7 @@ main {
     color: white;
     font-size: 1.2rem;
 }
+
 .digital.card {
     background-image: url("./images/digital.png");
 }
@@ -246,66 +250,75 @@ main {
 .middle {
     background-image: url("./images/download-8.png");
 }
-.premium{
+
+.premium {
     background-image: url("./images/premium.png");
 }
 
 /* ended choose collect section  */
-.number-data{
+.number-data {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* height: 100vh; */
- padding: 4rem;
- gap: 2rem;
+    padding: 4rem;
+    gap: 2rem;
 }
-.item{
- padding: 4rem 4.8rem;
- height: 18rem;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- background-color: #fff;
+
+.item {
+    padding: 4rem 4.8rem;
+    height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
 }
-.item p{
+
+.item p {
     color: #141719;
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 1.3;
 }
-.item span{
+
+.item span {
     color: #555f62;
     background-color: white;
     font-family: TBCX, sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7;
-    
 }
+
 /* ended number-data */
-.offers{
+.offers {
     padding: 0 1.5rem;
 }
-.offers div{
+
+.offers div {
     display: flex;
     justify-content: space-between;
 }
-.offers div h2{
+
+.offers div h2 {
+    margin-left: 1rem;
     color: #141719;
     margin-top: 0;
     font-size: 1.4rem;
     font-weight: 700;
 }
-.allOffer{
+
+.allOffer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
 }
+
 .allOffer svg {
     fill: #182cc0;
     width: 1.6rem;
     height: 1.6rem;
 }
+
 .allOffer span {
     color: #182cc0;
     font-size: 1.2rem;
@@ -313,33 +326,116 @@ main {
     line-height: 1.4;
 }
 
-.offers-wrap{
+.offers-wrap {
     overflow-x: auto;
     white-space: nowrap;
     padding: 1rem;
-    width: 100%; 
+    width: 100%;
     display: flex;
     gap: 1rem;
- }
- 
- .item{
-    width: 100%;
- }
- .investment{
-    background-image: url("	https://static.tbcconcept.ge/desktop/media/krchkk0k.rjw1110x332_1%201%20(2).png");
+    scroll-snap-type: x mandatory;
 }
-.iveria{
+
+.offers-wrap .item {
+    flex: 0 0 280px; 
+    height: 400px; 
+    cursor: pointer;
+    border-radius: 0.8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+    scroll-snap-align: start;
+}
+
+.offers-wrap .item img {
+    margin-bottom: 1rem;
+    width: 7.8rem;
+    height: 5.6rem;
+    border-radius: 0.8rem;
+}
+
+.offers-wrap .item:hover {
+    transform: scale(1.01); 
+}
+
+.investment {
+    background-image: url("https://static.tbcconcept.ge/desktop/media/sohqmh0p.mff350x212_1%201.png");
+}
+
+.iveria {
     background-image: url("./images/iveria.jpg");
 }
-.tegeta{
+
+.tegeta {
     background-image: url("./images/download-10.png");
 }
-.tegetaBt{
+
+.tegetaBt {
     background-image: url("./images/download-3.png");
 }
-.LeMeridian{
+
+.LeMeridian {
     background-image: url("./images/download-4.png");
 }
-.Colosseum{
+
+.Colosseum {
     background-image: url("./images/download-6.png");
+}
+
+.digital-bank {
+    grid-row-gap: 2.8rem;
+    padding: 0 4.5rem;
+}
+
+.digital-bank h2 {
+    color: #141719;
+    margin-top: 0;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.digital-bank div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    width: 100%;
+}
+
+.digital-bank img {
+    width: 37rem;
+    height: 48rem;
+}
+
+.digital-bank p {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+.digital-bank button {
+    color: #182cc0;
+    text-transform: uppercase;
+    border: 0.1rem solid #182cc0;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem 3.2rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.33;
+    text-decoration: none;
+}
+
+.cover {
+    position: relative;
+}
+
+.miniImage {
+    position: absolute;
+    width: 7.8rem;
+    height: 5.6rem;
 }

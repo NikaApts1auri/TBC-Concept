@@ -307,6 +307,7 @@ main {
 }
 
 .offers div {
+    height: fit-content;
     margin-bottom: 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -409,9 +410,8 @@ main {
 }
 .mini{position: absolute;
     background: white;
-    /* background-color: white; */
-    border-top-left-radius: 0.8rem; /* Top left corner */
-    border-bottom-left-radius: 0.8rem; /* Bottom left corner */
+    border-top-left-radius: 0.8rem; 
+    border-bottom-left-radius: 0.8rem; 
 }
 
 .description{
@@ -423,6 +423,7 @@ main {
     background-color: white;
     display: flex;
     flex-direction: column;
+  
 }
 .description div{
     display: flex;
@@ -512,8 +513,9 @@ main {
     -webkit-overflow-scrolling: touch; 
 }
 
-/* Products Wrapper */
+
 .products-wrap {
+    flex-direction: column;
     display: flex;
     gap: 1rem;
     overflow-x: auto;
@@ -522,7 +524,7 @@ main {
     scroll-snap-type: x mandatory;
 }
 
-/* Product Header */
+
 .products h2 {
     margin-top: 2rem; 
 }
@@ -613,6 +615,58 @@ main {
     background-color: #3295ce;
     transition: color 0.5s;
 }
+
+
+.rewards {
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+    gap: 2rem;
+    scroll-snap-type: x mandatory;
+    padding: 1.5rem;
+    -webkit-overflow-scrolling: touch; 
+}
+
+
+.rewards-wrap {
+    flex-direction: column;
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+}
+
+
+.rewards h2 {
+    margin-top: 2rem; 
+}
+
+
+.rewards-card{
+    height: fit-content;
+    align-items: flex-start;
+    padding: 2.8rem;
+    flex-shrink: 0;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid #e1e4e5;
+    border-radius: 0.8rem;
+    scroll-snap-align: start;
+    background-color: white; 
+    overflow: hidden; 
+}
+
+.rewards-card img {
+    max-width: 100%;
+    width: auto; 
+    height: 5.2rem; 
+}
+
 
 /* Responsive Styles */
 @media screen and (max-width: 768px) {

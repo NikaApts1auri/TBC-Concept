@@ -668,6 +668,180 @@ main {
 }
 
 
+/* starting footer  */
+/* footer{
+  
+} */
+
+.footer-top{
+    padding: 3.2rem 1.5rem; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d1d5d6;
+}
+.footer-top div{
+    gap: 0.2rem;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d5d6;
+
+}
+
+
+.question-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1.5rem;
+    width: 100%;
+    cursor: pointer;
+    border-bottom: 2px solid black;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d1d5d6;
+}
+.question-div a{
+    font-size: 1.6rem;
+    color:#141719;
+    font-weight: 700;
+}
+
+.question-div-header {
+    padding: 2rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.answer {
+    display: none;
+}
+
+.active .answer {
+    display: block;
+}
+
+.active .question {
+    font-weight: bold;
+}
+
+.active .arrow {
+    transform: rotate(180deg);
+}
+
+.lang-toggle{
+    display: flex;
+    width: 7.2rem;
+    height: 4rem;
+    background-color: #f9fafa;
+padding: 1.2rem;
+    gap: 0.4rem;
+    border-radius: 0.4rem;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border: none;
+}
+.lang-toggle svg{
+    width: 1.6rem;
+    height: 1.6rem;
+}
+.lang-toggle div{
+    border: none;
+    font-size: 1.4rem;
+}
+.question-div .arrow{
+    width: 2.8rem;
+    height: 2.9rem;
+    fill: none;
+}
+.answers{
+    grid-row-gap: 1.6rem;
+    padding: 1,5rem 0;
+    display: flex;
+    padding-right: 1.5rem;
+    flex-direction: column;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+.contacts{
+    padding: 3.2rem 1.5rem;
+}
+.footer-contacts{
+    margin-top: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.footer-contacts a{
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1.4rem;
+    gap: 1rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+}
+.contacts h3{
+    color: #141719;
+    margin-top: 5rem;
+    font-size: 1.6rem;
+    margin-bottom: 2.4rem;
+    font-weight: 700;
+    line-height: 1.7;
+}
+.footer-social-list{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    flex-wrap: wrap;
+    display: flex;
+}
+.footer-social-list a{
+    color: inherit;
+    font-size: inherit;
+    width: 5.2rem;
+    height: 5.2rem;
+    background-color: #f9fafa;
+    border-radius: 0.6rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.footer-bottom{
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    background-color: #f9fafa;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    border-top: 1px solid #eef1f1;
+}
+.footer-bottom-links{
+    grid-column-gap: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+.footer-bottom-links span{
+    color: #555f62;
+    cursor: pointer;
+}
+.footer-bottom-logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
     .product-card {

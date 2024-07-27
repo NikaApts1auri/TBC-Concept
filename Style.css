@@ -39,6 +39,38 @@ header {
     min-width: 35.5rem;
     border-bottom: 0.1rem solid rgb(222, 220, 220);
 }
+.headerBtn-click{
+    display: none;
+    top: 0;
+    z-index: 102;
+    background-color: #f9fafa;
+    flex-direction: column;
+    padding-top: 80px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.contactss{
+    padding: 3.2rem 1.5rem;
+}
+.contactss h2{
+    font-family: 'TBCX', sans-serif;
+    font-size: 1.6rem;
+    color: #000;
+}
+.footer-contacts{
+    gap: 3rem;
+    margin-bottom: 5rem;
+}
+
+.close{
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: none;
+    width: 3.6rem;
+    height: 3.2rem;
+}
 .headers-divs{
     height: 100%;
     grid-column-gap: 3.2rem;
@@ -61,7 +93,19 @@ header {
 .tbcGrey2{
     display: none;
 }
-
+.headerBtn2{
+    height: 36px;
+    grid-column-gap: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 700;
+    transition: background-color .25s ease-in-out;
+    display: flex;
+}
 .search {
     width: 2.5rem;
     height: 2.5rem;
@@ -100,6 +144,7 @@ header {
 }
 
 .headerBtn {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
     display: flex;
     width: 3.6rem;
     height: 3.2rem;
@@ -117,6 +162,10 @@ header {
     transition: background-color .25s ease-in-out;
     /* display: flex; */
     display: none;
+}
+.headerBtn2 div{
+    font-family: TBCX, sans-serif;
+    font-size: 1.4rem;
 }
 
 .arrow-order p {
@@ -265,6 +314,7 @@ header div {
 }
 
 .message {
+    margin-top:3rem ;
     padding: 5rem 1.5rem 5rem;
 }
 
@@ -277,6 +327,7 @@ header div {
 }
 
 .choose {
+    margin-top: 8rem;
     display: flex;
     flex-direction: column;
     padding: 0 1.5rem;
@@ -284,48 +335,10 @@ header div {
 
 .choose h2 {
     margin-left: 1rem;
-
     font-size: 1.4rem;
     font-weight: 700;
     color: #141719;
 }
-
-/* .cards-wrapper {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 3rem 1.5rem;
-    width: 100%; 
-    display: flex;
-    gap: 1.5rem;
-    scroll-snap-type: x mandatory;
-} */
-
-/* .cards-wrapper img::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3); 
-    z-index: 1; 
-} */
-/* .card {
-    flex: 0 0 28rem; 
-    height: 23.2rem; 
-    cursor: pointer;
-    border-top-left-radius: 0.8rem;
-    border-top-left-radius: 0.8rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 2rem; 
-    color: white; 
-    padding-top: 14rem;
-    align-items: flex-start;
-    scroll-snap-align: start;
-} */
-
 
 .cards-wrapper {
     overflow-x: auto;
@@ -338,12 +351,12 @@ header div {
 }
 
 .card {
-    position: relative; /* Important to position the pseudo-element correctly */
+    position: relative; 
     flex: 0 0 28rem;
     height: 23.2rem;
     cursor: pointer;
     border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem; /* Corrected to right */
+    border-top-right-radius: 0.8rem; 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -361,15 +374,15 @@ header div {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity as needed */
-    z-index: 1; /* Ensure the overlay appears above the background image */
-    border-top-left-radius: 0.8rem; /* Ensure the overlay respects border radius */
-    border-top-right-radius: 0.8rem; /* Ensure the overlay respects border radius */
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1; 
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
 }
 
 .card > * {
     position: relative;
-    z-index: 2; /* Ensure the content appears above the overlay */
+    z-index: 2;
 }
 
 
@@ -764,7 +777,6 @@ header div {
 .digital-button {
     width: 100%;
     background: #f9fafa;
-    color: #182cc0;
     border: 0.1rem solid #182cc0;
     border-radius: 0.4rem;
     justify-content: center;
@@ -776,6 +788,13 @@ header div {
     display: flex;
     gap: 0.5rem;
 }   
+.digital-button a{
+    text-decoration: none;
+    color: #182cc0;
+}
+.digital-button:hover{
+    border-color: #e1e4e5;
+}
 .products {
     display: flex;
     flex-direction: row;
@@ -1095,7 +1114,7 @@ padding: 1.2rem;
 }
 .footer-bottom{
     padding: 2.4rem 1.5rem;
-    gap: 4rem;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
     padding-top: 2.4rem;
@@ -1111,6 +1130,8 @@ padding: 1.2rem;
     height: 3.2rem;
 }
 .footer-bottom-links{
+    flex-wrap: wrap;
+    grid-row-gap: 8px;
     grid-column-gap: 3rem;
     align-items: center;
     display: flex;
@@ -1136,7 +1157,7 @@ padding: 1.2rem;
     justify-content: space-between;
 }
 .child{
-
+    font-family: 'TBCX', sans-serif;
     color: #555f62;
     font-family: TBCX, sans-serif;
     font-size: 14px;
@@ -1228,6 +1249,9 @@ padding: 1.2rem;
    .choose{
     padding: 0 4.5rem;
    }
+   .choose h2{
+    font-size: 2.4rem;
+   }
    .footer-top{
     padding: 3.6rem 4.5rem;
    }
@@ -1265,7 +1289,7 @@ padding: 1.2rem;
     font-size: 2.4rem;
   }
   .footer-bottom {
-    padding: 5.6rem 4.5rem;
+    padding: 3.6rem 4.5rem;
   }
 .products-wrap{
     padding: 3.6rem 4.5rem;
@@ -1369,6 +1393,7 @@ font-size: 2.4rem;
     display: flex;
 }
 .footer-bottom{
+    padding: 2.8rem 4.5rem;
     flex-direction: row-reverse;
     justify-content: space-between;
 }
@@ -1384,4 +1409,21 @@ font-size: 1.2rem;
     height: 3.2rem;
 }
 
+}
+@media only screen and (min-width:992px ){
+    .header{
+        padding: 0 4.7rem;
+    }
+    .headerBtn{
+        display: none;
+    }
+    .headerBtn2{
+        display: flex;
+    }
+    .headers-divs{
+        display: flex;
+    }
+   .banner{
+    padding: 8rem;
+   }
 }

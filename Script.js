@@ -1,4 +1,4 @@
-//accordion
+// footer accordion
 const container = document.querySelector("footer");
 let active = null;
 
@@ -94,6 +94,7 @@ const threePoint=document.querySelector(".threePoint")
 const x=document.querySelector(".x")
 
 
+
 menuTrigger.addEventListener('click', () => {
     if (menuButtons.style.display === 'flex') {
         menuButtons.style.display = 'none';
@@ -110,3 +111,58 @@ if (menuButtons.style.display === 'flex'){
 
 }
 });
+
+// about header button clicking and automatically closing div
+
+document.addEventListener('DOMContentLoaded', () => {
+    const headerBtn = document.querySelector('.headerBtn');
+    const headerBtnClick = document.querySelector('.headerBtn-click');
+    const close = document.querySelector('.close');
+    
+    headerBtn.addEventListener('click', () => {
+        if (headerBtnClick.style.display === 'none' || headerBtnClick.style.display === '') {
+            headerBtnClick.style.display = 'flex';
+            headerBtn.style.display = 'none';  
+            close.style.display = 'block';
+        } else {
+            headerBtnClick.style.display = 'none';
+            close.style.display = 'none';
+            headerBtn.style.display = 'flex'; 
+        }
+    });
+
+    close.addEventListener('click', () => {
+        headerBtnClick.style.display = 'none';
+        close.style.display = 'none';
+        headerBtn.style.display = 'flex'; 
+    });
+
+    const handleResize = () => {
+        if (window.innerWidth >= 992) {
+            headerBtnClick.style.display = 'none';
+            close.style.display = 'none';
+            headerBtn.style.display = 'flex';
+        }
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Initial check
+    handleResize();
+});
+
+
+// Here i was working about the translator
+
+// document.getElementById('toggleLanguage').addEventListener('click', function() {
+//     const elements = document.querySelectorAll('[data-georgian][data-english]');
+//     elements.forEach(el => {
+//         const georgianText = el.getAttribute('data-georgian');
+//         const englishText = el.getAttribute('data-english');
+//         if (el.innerText === georgianText) {
+//             el.innerText = englishText;
+//         } else {
+//             el.innerText = georgianText;
+//         }
+//     });
+// });

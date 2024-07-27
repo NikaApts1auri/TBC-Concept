@@ -2,13 +2,6 @@
     font-family: 'TBCX';
     src: url('path/to/TBCX.ttf') format('truetype');
 }
-main{
-    display: flex;
-    flex-direction: column;
-    background-color: #f9fafa;
-    gap: 2rem;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +13,18 @@ body {
     color: #555f62;
     font-family: 'TBCX', sans-serif;
 }
-
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: #f9fafa;
+    gap: 2rem;
+}
 html {
     font-size: 62.5%;
 }
-
+button{
+    font-family: 'TBCX', sans-serif;
+}
 header {
     position: sticky;
     z-index: 1000;
@@ -50,12 +50,16 @@ header {
 }
 .headers-divs div{
     font-size: 1.4rem;
+    gap: 1rem;
 }
 .tbcGrey {
     display: block;
     width: 3.6rem;
     height: 3.2rem;
     cursor: pointer;
+}
+.tbcGrey2{
+    display: none;
 }
 
 .search {
@@ -78,9 +82,6 @@ header {
     height: 1.6rem;
 }
 
-.arrow-order p {
-    color: currentColor;
-}
 
 .arrow-order {
     display: flex;
@@ -119,13 +120,12 @@ header {
 }
 
 .arrow-order p {
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.4;
     color: #182cc0;
     text-transform: uppercase;
     font-size: 1.2rem;
 }
-
 header div {
     display: flex;
 }
@@ -203,27 +203,27 @@ header div {
     background-image: url("./images/download.webp");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; /* Ensure the background covers the entire element */
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .banner::before {
-    content: '';
     position: absolute;
-    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); /* Medium dark overlay */
-    z-index: 1; /* Ensure overlay is above the image but below content */
+    background: rgba(0, 0, 0, 0.3); 
+    content: '';
+    z-index: 1; 
+    top: 0;
 }
 
 .bannerInner {
-    position: relative; /* Ensure content is above the overlay */
-    z-index: 2; /* Make sure content is above the overlay */
-    color: white; /* Ensure text is 100% white */
+    position: relative; 
+    z-index: 2; 
+    color: white; 
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -238,7 +238,6 @@ header div {
 }
 
 .banner p {
-    color: #fff;
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.7;
@@ -246,7 +245,7 @@ header div {
 
 .banner button {
     cursor: pointer;
-    transition: 1s;
+    transition: opacity .25s ease-in-out;
     text-transform: uppercase;
     width: 100%;
     height: 5rem;
@@ -291,7 +290,7 @@ header div {
     color: #141719;
 }
 
-.cards-wrapper {
+/* .cards-wrapper {
     overflow-x: auto;
     white-space: nowrap;
     padding: 3rem 1.5rem;
@@ -299,9 +298,19 @@ header div {
     display: flex;
     gap: 1.5rem;
     scroll-snap-type: x mandatory;
-}
+} */
 
-.card {
+/* .cards-wrapper img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+} */
+/* .card {
     flex: 0 0 28rem; 
     height: 23.2rem; 
     cursor: pointer;
@@ -315,7 +324,56 @@ header div {
     padding-top: 14rem;
     align-items: flex-start;
     scroll-snap-align: start;
+} */
+
+
+.cards-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 3rem 1.5rem;
+    width: 100%;
+    display: flex;
+    gap: 1.5rem;
+    scroll-snap-type: x mandatory;
 }
+
+.card {
+    position: relative; /* Important to position the pseudo-element correctly */
+    flex: 0 0 28rem;
+    height: 23.2rem;
+    cursor: pointer;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem; /* Corrected to right */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem;
+    color: white;
+    padding-top: 14rem;
+    align-items: flex-start;
+    scroll-snap-align: start;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity as needed */
+    z-index: 1; /* Ensure the overlay appears above the background image */
+    border-top-left-radius: 0.8rem; /* Ensure the overlay respects border radius */
+    border-top-right-radius: 0.8rem; /* Ensure the overlay respects border radius */
+}
+
+.card > * {
+    position: relative;
+    z-index: 2; /* Ensure the content appears above the overlay */
+}
+
+
+
 
 .card:hover {
     transform: scale(1.01); 
@@ -339,7 +397,7 @@ header div {
     font-size: 1.2rem;
 }
 
-.digital.card {
+.digitali.card {
     background-image: url("./images/digital.png");
 }
 
@@ -664,38 +722,48 @@ header div {
     overflow-wrap: break-word;
 }
 
-
- .digital-bank {
+.digital-bank {
+    background-color: white;
     grid-row-gap: 2.8rem;
     padding: 3.2rem 1.5rem;
 }
 
 .digital-bank h2 {
+    margin-bottom: 2.5rem;
     color: #141719;
-    margin-top: 0;
     font-size: 1.4rem;
     font-weight: 700;
     line-height: 1.5;
 }
 
-.digital-bank div {
+.digital{
+    order: 2;
     display: flex;
     flex-direction: column;
-    gap: 2.8rem;
-    width: 100%;
 }
+
 
 .digital-bank img {
     max-width: 37rem;
     max-height: 48rem;
 }
 
-.digital-bank p {
+.digital-description{
+    gap: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+.digital-description p {
+    font-family: TBCX, sans-serif;
+    color: #555f62;
     font-size: 1.4rem;
     line-height: 2.5rem;
 }
 
-.digital-bank button {
+.digital-button {
+    width: 100%;
+    background: #f9fafa;
     color: #182cc0;
     border: 0.1rem solid #182cc0;
     border-radius: 0.4rem;
@@ -707,9 +775,7 @@ header div {
     align-items: center;
     display: flex;
     gap: 0.5rem;
-} 
-
-
+}   
 .products {
     display: flex;
     flex-direction: row;
@@ -733,8 +799,9 @@ header div {
 }
 
 
-.products h2 {
+.products-wrap h2 {
     margin-top: 2rem; 
+    color: black;
 }
 
 /* Product Card */
@@ -808,7 +875,7 @@ header div {
 
 .private-banker button {
     cursor: pointer;
-    transition: 1s;
+    transition: opacity .25s ease-in-out;
     text-transform: uppercase;
     position: relative;
     z-index: 2; 
@@ -845,6 +912,7 @@ header div {
 
 
 .rewards-wrap {
+    margin-top: 5rem;
     flex-direction: column;
     display: flex;
     gap: 1rem;
@@ -880,9 +948,6 @@ header div {
 
 
 /* starting footer  */
-/* footer{
-  
-} */
 
 .footer-top{
     padding: 3.2rem 1.5rem; 
@@ -976,6 +1041,7 @@ padding: 1.2rem;
     line-height: 1.7;
 }
 .contacts{
+    display: block;
     padding: 3.2rem 1.5rem;
 }
 .footer-contacts{
@@ -1040,6 +1106,10 @@ padding: 1.2rem;
     font-size: 1.4rem;
     border-top: 0.1rem solid #eef1f1;
 }
+.footer-bottom-logo svg{
+    width: 2.1rem;
+    height: 3.2rem;
+}
 .footer-bottom-links{
     grid-column-gap: 3rem;
     align-items: center;
@@ -1056,6 +1126,71 @@ padding: 1.2rem;
     align-items: center;
     gap: 1rem;
 }
+.accordion{
+    display: block;
+}
+.footer-tab-main{
+    font-family: 'TBCX', sans-serif;
+  padding: 0 4.5rem 4.5rem;
+    display: none;
+    justify-content: space-between;
+}
+.child{
+
+    color: #555f62;
+    font-family: TBCX, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+}
+.child .h{
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.child a{
+    text-decoration: none;
+    color: inherit;
+}
+.footer-tab-main .child{
+    gap: 2rem;
+   max-width: 15.5rem;
+}
+.footer-tab-main.footer-social-list{
+    display: flex;
+    flex-direction: row;
+}
+.footer-tab-top{
+    display: none;
+    justify-content: space-between;
+    padding: 4.5rem 4.5rem 5rem;
+}
+.footer-tab-top svg {
+    color: black;
+}
+.lang-btn{
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 7.2rem;
+    height: 4rem;
+    grid-column-gap: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-weight: 700;
+    transition: background-color .25s ease-in-out;
+    display: flex;
+
+}
+.lang-btn svg{
+    width: 1.6rem;
+    height: 1.9rem;
+}
 /* Responsive Styles */
 @media screen and (max-width: 1440px) {
     .product-card {
@@ -1066,10 +1201,14 @@ padding: 1.2rem;
    header{
     padding: 0 4.5rem;
    }
+   .arrow-order p{
+    margin: 2px 0 0;
+    font-size: 1.4rem;
+   }
    .banner{
-
     padding: 24rem 4.5rem 3.6rem;
    }
+ 
    .banner h2{
     font-size: 2.4rem;
     font-weight: bold;
@@ -1105,11 +1244,16 @@ padding: 1.2rem;
    
     font-size: 1.6rem;
    }
+ 
+   .digital-content h2{
+    font-size: 2.4rem;
+   }
    .digital-bank{
     padding: 3.2rem 4.5rem;
    }
-   .digital-bank h2{
+   .products-wrap h2{
     font-size: 2.4rem;
+    font-weight: 700
    }
    .contacts{
     padding: 5.6rem 4.5rem;
@@ -1153,4 +1297,91 @@ font-size: 2.4rem;
     .private-banker h2{
         font-size: 2.4rem;
     }
+}
+@media only screen and (min-width: 768px ){
+.tbcGrey{
+    display: none;
+}
+.tbcGrey2{
+    display: flex;
+}
+.banner-section{
+    padding: 0 4.5rem;
+   
+}
+.banner{
+ border-radius: 0.6rem;
+}
+.banner::before{
+  border-radius: 0.6rem;
+}
+.digital{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 10rem;
+}
+.digital img{
+    width: 21rem;
+    height: 27rem;
+}
+.digital-description{
+    margin-top: 12rem;
+}
+.digital button{
+    width: 16rem;
+    height: 5.2rem;
+}
+.digital-content h2{
+    position: absolute;
+    margin-top: 5rem;
+}
+.banner button{
+    width: 15.1rem;
+}
+.banner p{
+    max-width: 45rem;
+}
+.banker-section{
+    padding: 0 4.5rem;
+}
+.private-banker{
+    border-radius: 0.6rem;
+}
+.private-banker::before{
+    border-radius: 0.6rem;
+}
+.private-banker button{
+    width: 13.3rem;
+}
+.accordion{
+    display: none;
+}
+.contacts{
+    display: none;
+}
+.footer-social-list{
+    gap: 1rem;
+}
+.footer-tab-main{
+    display: flex;
+}
+.footer-tab-top{
+    display: flex;
+}
+.footer-bottom{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.footer-bottom span{
+font-size: 1.2rem;
+
+}
+.footer-bottom{
+    font-size: 1.2rem;
+}
+.footer-bottom svg{
+    width: 2.1rem;
+    height: 3.2rem;
+}
+
 }

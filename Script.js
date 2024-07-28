@@ -22,14 +22,9 @@ container.addEventListener("click", (event) => {
 
 //slider
 
-
 let isDown = false;
 let startX;
 let scrollLeft;
-
-
-
-
 
 // menu trigger
 
@@ -110,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Here i was working about the translator
+// Here i worked about the translator
 
 // document.getElementById('toggleLanguage').addEventListener('click', function() {
 //     const elements = document.querySelectorAll('[data-georgian][data-english]');
@@ -125,3 +120,39 @@ document.addEventListener('DOMContentLoaded', () => {
 //     });
 // });
 
+
+// Feat header's dropdown menu
+
+document.querySelector('.hdr-prod').addEventListener('click', function() {
+  toggleDisplay('header-product');
+});
+
+document.querySelector('.hdr-offer').addEventListener('click', function() {
+  toggleDisplay('header-offer');
+});
+
+document.querySelector('.hdr-concept').addEventListener('click', function() {
+  toggleDisplay('header-concept');
+});
+
+function toggleDisplay(className) {
+  const dropDown = document.querySelector('.header-dropDown');
+  const targetElement = document.querySelector('.lists .' + className);
+  
+  if (targetElement.classList.contains('active')) {
+    targetElement.classList.remove('active');
+    dropDown.classList.remove('active');
+  } else {
+    document.querySelectorAll('.lists .lst').forEach(function(el) {
+      el.classList.remove('active');
+    });
+    targetElement.classList.add('active');
+    dropDown.classList.add('active');
+  }
+  
+  if (document.querySelectorAll('.lists .lst.active').length === 0) {
+    dropDown.classList.remove('active');
+  } else {
+    dropDown.classList.add('active');
+  }
+}

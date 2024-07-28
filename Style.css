@@ -82,10 +82,98 @@ header {
     width: 3.6rem;
     height: 3.2rem;
 }
+.header-dropDown {
+    width: 100%;
+    margin-top: 8rem;
+    display: none; /* Change initial display to none */
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    padding: 3.2rem 0;
+  }
+  
+  .header-dropDown.active {
+    display: flex; /* Flex when active */
+  }
+  
+  .carts-link {
+    padding: 0 4.7rem;
+    margin-left: 5rem;
+  }
+  
+  .arrow-link {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #182cc0;
+  }
+  
+  .arrow-link a {
+    font-weight: 700;
+    color: #182cc0;
+    font-size: 1.4rem;
+    text-decoration: none;
+  }
+  
+  .lists .lst {
+    display: none; 
+  }
+  
+  .lst {
+    max-width: 20rem;
+    gap: 3rem;
+    flex-direction: column;
+    opacity: 1;
+    pointer-events: all;
+    transition-delay: .6s;
+  }
+  
+  .lists .header-product,
+  .lists .header-offer,
+  .lists .header-concept {
+    display: none;
+  }
+  .header-product{
+    margin-left: 3rem;
+  }
+  .header-offer{
+    margin-left: 15rem;
+  }
+  .header-concept{
+    margin-left: 28rem;
+  }
+  .active {
+    display: flex !important;
+  }
+  
+  .hdr-prod:active,
+  .hdr-offer:active,
+  .hdr-concept:active {
+    border-bottom: 2px solid blue;
+  }
+  
+  .lst a {
+    color: #000;
+    cursor: pointer;
+    padding-right: 47px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    transition: color 0.25s ease-in-out;
+  }
+  
+  .lst.flex {
+    display: flex;
+  }
+  
+  .headers-divs div {
+    cursor: pointer;
+  }
 .headers-divs{
     height: 100%;
     grid-column-gap: 3.2rem;
-    flex: 1;
     align-items: center;
     margin-left: 4rem;
     margin-right: 4rem;

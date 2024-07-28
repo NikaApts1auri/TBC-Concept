@@ -9,9 +9,11 @@
 }
 
 body {
+    max-width: 111rem;
     justify-content: center;
     color: #555f62;
     font-family: 'TBCX', sans-serif;
+    margin: 0 auto;
 }
 main{
     display: flex;
@@ -484,10 +486,12 @@ header div {
     font-weight: 700;
     line-height: 1.4;
 }
-.allOffer:hover .span{
+.allOffer:hover span{
+    cursor: pointer;
     color: #3295ce;
 }
-.allOffer:hover .svg{
+.allOffer:hover svg{
+    cursor: pointer;
     color: #3295ce;
 }
 /* ended number-data */

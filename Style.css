@@ -135,15 +135,19 @@ header {
   .lists .header-concept {
     display: none;
   }
-  .header-product{
+  
+  .header-product {
     margin-left: 3rem;
   }
-  .header-offer{
+  
+  .header-offer {
     margin-left: 15rem;
   }
-  .header-concept{
+  
+  .header-concept {
     margin-left: 28rem;
   }
+  
   .active {
     display: flex !important;
   }
@@ -163,6 +167,9 @@ header {
     text-decoration: none;
     transition: color 0.25s ease-in-out;
   }
+  .lst a:hover{
+    color: #182cc0;
+  }
   
   .lst.flex {
     display: flex;
@@ -171,19 +178,22 @@ header {
   .headers-divs div {
     cursor: pointer;
   }
-.headers-divs{
+  
+  .headers-divs {
     height: 100%;
     grid-column-gap: 3.2rem;
     align-items: center;
     margin-left: 4rem;
     margin-right: 4rem;
     display: none;
-}
-.headers-divs div{
+  }
+  
+  .headers-divs div {
     cursor: pointer;
     font-size: 1.4rem;
     gap: 1rem;
-}
+  }
+  
 .tbcGrey {
     display: block;
     width: 3.6rem;
@@ -605,8 +615,7 @@ header div {
    
   }
   .slide-card{
-    border-top-left-radius: 0.8rem;
-    border-top-right-radius: 0.8rem;
+   border-radius: 0.8rem;
     border: 0.1rem solid #e1e4e5;
     height: 100%;
     display: flex;
@@ -1667,4 +1676,19 @@ font-size: 1.2rem;
 .footer-bottom{
 padding: 2.8rem 4.7rem;
 }
+/* .header-product{
+    margin-left: 0;
+}
+.header-offer{
+    margin-left: 5rem;
+}
+.header-concept{
+    margin-left: 16rem;
+} */
+}
+
+@media only screen and (min-width: 1440px ){
+/* .header-dropDown{
+    margin-left: 15rem;
+} */
 }

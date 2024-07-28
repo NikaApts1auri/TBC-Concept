@@ -156,3 +156,4 @@ function toggleDisplay(className) {
     dropDown.classList.add('active');
   }
 }
+

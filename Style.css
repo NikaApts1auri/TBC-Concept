@@ -64,12 +64,16 @@ header {
     right: 0;
 }
 .contactss{
-    padding: 3.2rem 1.5rem;
+    padding: 3.2rem 4.5rem;
 }
+
 .contactss h2{
     font-family: 'TBCX', sans-serif;
-    font-size: 1.6rem;
+    font-size: 2.4rem;
     color: #000;
+}
+.contactss h3{
+    font-size: 2.4rem;
 }
 .footer-contacts{
     gap: 3rem;
@@ -85,7 +89,7 @@ header {
 .header-dropDown {
     width: 100%;
     margin-top: 8rem;
-    display: none; /* Change initial display to none */
+    display: none; 
     background-color: white;
     position: fixed;
     z-index: 1000;
@@ -94,7 +98,8 @@ header {
   }
   
   .header-dropDown.active {
-    display: flex; /* Flex when active */
+    /* padding-left: 18rem; */
+    display: flex; 
   }
   
   .carts-link {

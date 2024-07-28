@@ -98,15 +98,8 @@ header {
   }
   
   .header-dropDown.active {
-    /* padding-left: 18rem; */
     display: flex; 
   }
-  
-  .carts-link {
-    padding: 0 4.7rem;
-    margin-left: 5rem;
-  }
-  
   .arrow-link {
     margin-top: 2rem;
     display: flex;
@@ -125,7 +118,10 @@ header {
   .lists .lst {
     display: none; 
   }
-  
+  .img-lists{
+    display: flex;
+    align-items: center;
+  }
   .lst {
     max-width: 20rem;
     gap: 3rem;
